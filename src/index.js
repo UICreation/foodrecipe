@@ -1,14 +1,11 @@
-import React, { Component } from 'react'
-import { render } from 'react-dom'
+import React from 'react';
+import { render } from 'react-dom';
+// import Logo from './static/images/shivam.jpg';
+import Recipe from './components';
+import './static/css/common.css';
 
-class App extends React.Component {
-    render() {
-        return (
-            <div>
-                React element is rendering to the DOM!
-            </div>
-        )
-    }
-}
+const App = () => (
+  <Recipe />
+);
 
-render(<App />, document.getElementById('root'))
+render(<App />, document.getElementById('root'));

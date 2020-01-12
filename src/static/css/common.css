@@ -1,0 +1,50 @@
+@import "basscss";
+@import "sanitize.css";
+/* @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap'); */
+
+:root {
+    --mywhite: white;
+    --font-size-small: 0.875rem; 
+}
+html {
+    font-size: 16px;
+}
+body {
+    background-color: var(--mywhite);
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-stretch: normal;
+    font-weight: normal;
+    color: black;
+}
+
+/* Custom Utilities */
+.font-size-small {
+    font-size: var(--font-size-small);
+}
+.pointer {
+    cursor: pointer;
+}
+/* End */
+
+.recipe-container {
+    display: flex;
+    padding: 1.25rem;
+}
+.recipe-container > div {
+    flex: 0 1 30%;
+}
+.recipe-container > div:last-child {
+    flex: 0 1 60%;
+}
+
+.recipe-list h3 {
+    font-weight: 400;
+}
+.recipe-detail h3 {
+    font-weight: 400;
+}
+ul li {
+    padding: 0.5rem 0;
+}

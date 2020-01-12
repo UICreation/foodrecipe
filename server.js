@@ -1,14 +1,16 @@
 const express = require('express')
 const app = express()
+const port = 8002
 const path = require('path')
 const bodyParser = require('body-parser')
-const port = 8002
 const json = require('./src/recipes.json')
 
 app.use(bodyParser.json())
 app.use(express.static(path.join(__dirname, 'dist')))
+
 app.listen(port, () => {
   console.log('server is ready!')
+  console.log('The value of PORT is:', process.env.PORT);
 })
 
 app.get('/recipes', (req, res) => {

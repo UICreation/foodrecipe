@@ -2,6 +2,8 @@ import React, { Fragment } from 'react'
 import RecipeList from './RecipesList'
 import RecipeDetail from './RecipeDetail'
 
+const NODE_ENV = process.env.NODE_ENV || 'development'
+
 class Recipe extends React.Component {
   state = {
     recipe: [],
@@ -33,6 +35,7 @@ class Recipe extends React.Component {
       }))
   }
   render() {
+    console.log(NODE_ENV)
     const { isLoaded, recipes } = this.state;
     return (
       <div>

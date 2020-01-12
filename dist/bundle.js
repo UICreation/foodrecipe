@@ -32448,6 +32448,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
+var NODE_ENV = "none" || false;
 
 var Recipe =
 /*#__PURE__*/
@@ -32510,6 +32511,7 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
+      console.log(NODE_ENV);
       var _this$state = this.state,
           isLoaded = _this$state.isLoaded,
           recipes = _this$state.recipes;
@@ -32550,7 +32552,7 @@ var RecipeList = function RecipeList(props) {
       className: "recipe-list"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Recipe List")), props.recipes.length ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
       className: "list-reset"
-    }, props.recipes.slice(0, 6).map(function (item) {
+    }, props.recipes.slice(0, 10).map(function (item) {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
         key: item.id
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
@@ -33482,9 +33484,9 @@ var RecipeDetail = function RecipeDetail(props) {
     className: "h5 bold"
   }, "Ingredients:")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ol", {
     className: "font-size-small"
-  }, recipe.ingredient.map(function (item) {
+  }, recipe.ingredient.map(function (item, i) {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-      key: item.name.toString()
+      key: i.toString()
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
       className: "block"
     }, "\n                      name: ".concat(item.name, ", amount: ").concat(item.amount, ", unit: ").concat(item.unit, "\n                      ")));
@@ -33492,15 +33494,15 @@ var RecipeDetail = function RecipeDetail(props) {
     className: "h5 bold"
   }, "Recipe steps:")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ol", {
     className: "font-size-small"
-  }, recipe.step.map(function (item) {
+  }, recipe.step.map(function (item, i) {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-      key: item.description.toString()
+      key: i.toString()
     }, item.description);
-  }))) : null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }))) : null), recipe.notes && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "h5 bold"
   }, "Recipe note:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "font-size-small"
-  }, recipe.notes)) : null));
+  }, recipe.notes))) : null));
 };
 
 RecipeDetail.defaultProps = {

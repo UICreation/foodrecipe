@@ -17,7 +17,11 @@ const RecipeList = (props) => (
             props.recipes.slice(0, 10).map(item => {
               return <li key={item.id}>
                 <span className="block pointer" onClick={() => props.getRecipe(item.id)}>
-                  - {
+                  <input 
+                  type="checkbox"
+                  checked
+                  />
+                   {
                     item.name
                   }
                 </span>

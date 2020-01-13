@@ -38,10 +38,6 @@ class Recipe extends React.Component {
     console.log(NODE_ENV)
     const { isLoaded, recipes } = this.state;
     return (
-      <div>
-        <header>
-          <p className="h2">&nbsp; Food Recipes!!!</p>
-        </header>
         <div className="recipe-container">
           {
             isLoaded ?
@@ -53,7 +49,6 @@ class Recipe extends React.Component {
           }
 
         </div>
-      </div>
     );
   }
 }

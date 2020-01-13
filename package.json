@@ -1,9 +1,8 @@
 {
-  "name": "recipes",
+  "name": "food-recipe-app",
   "version": "1.0.0",
-  "description": "Food Recipes",
+  "description": "Food Recipe app built in Node and React Js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
     "start": "webpack-dev-server",
     "lint": "npx eslint ./src"
@@ -28,8 +27,15 @@
       ]
     ]
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "food recipe app"
+  ],
+  "author": "Shivam Kumar",
+  "homepage": "https://github.com/UICreation/foodrecipe",
+  "bugs": {
+    "url": "https://github.com/UICreation/foodrecipe/issues",
+    "email": "shivam.designweb@gmail.com"
+  },
   "license": "ISC",
   "devDependencies": {
     "@babel/cli": "^7.7.7",
@@ -38,6 +44,8 @@
     "@babel/preset-env": "^7.7.7",
     "@babel/preset-react": "^7.7.4",
     "babel-loader": "^8.0.6",
+    "basscss-background-colors": "^2.1.0",
+    "basscss-colors": "^2.2.0",
     "css-loader": "^3.4.1",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.0.1",
@@ -67,6 +75,7 @@
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
+    "react-router-dom": "^5.1.2",
     "request": "^2.88.0",
     "sanitize.css": "^11.0.0",
     "whatwg-fetch": "^3.0.0"

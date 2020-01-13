@@ -1,19 +1,19 @@
 @import "basscss";
+@import "basscss-colors";
+@import "basscss-background-colors";
 @import "sanitize.css";
 /* @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap'); */
 
 :root {
-    --mywhite: white;
     --font-size-small: 0.875rem; 
 }
 html {
     font-size: 16px;
 }
 body {
-    background-color: var(--mywhite);
     font-size: 1rem;
     font-family: Arial, Helvetica, sans-serif;
-    font-family: 'Open Sans', sans-serif;
+    /* font-family: 'Open Sans', sans-serif; */
     font-stretch: normal;
     font-weight: normal;
     color: black;

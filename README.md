@@ -1,2 +1,2 @@
 # foodrecipe
-Food Recipes!!!
+Food Recipe App!!!

@@ -20,7 +20,7 @@ app.get('/recipes', (req, res) => {
   res.end('ok')
  })
 
- app.get('/recipes/:id', (req, res) => {
+ app.get('/recipe/:id', (req, res) => {
     let id = req.params.id
     let data = json.recipe.filter(item => item.id !== id)
     let item = json.recipe.filter(item => item.id === id)

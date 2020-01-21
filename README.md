@@ -6,5 +6,10 @@ Food Recipe App!!!
 ```
 npm i
 npm start
+```
+
+then open a seperate terminal and run below command
+
+```
 node server.js
 ```

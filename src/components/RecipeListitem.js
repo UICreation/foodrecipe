@@ -9,7 +9,7 @@ const RecipeListItem = ({
     return (
         <li>
             <span className="block pointer" onClick={() => props.getRecipe(item.id)}>
-                <span onClick={
+                <span title="Add to Favourite" onClick={
                     e => {
                         e.stopPropagation()
                         props.addToFavourite(item.id)

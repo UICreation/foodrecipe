@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
 
 const RecipeDetail = (props) => {
@@ -18,7 +19,16 @@ const RecipeDetail = (props) => {
               <img src={recipe.image} alt={recipe.name} height="400" className="fit" />
               <p className="h2"> {
                 recipe.name
-              }</p>
+              }
+                {
+                  props.match.params.id === undefined &&
+                  <Link
+                    to={`/recipe/${recipe.id}`}
+                    className="bg-silver black text-decoration-none h5 p1 px2 ml2 rounded"
+                  >
+                    Go to Article</Link>
+                }
+              </p>
               <p className="m0">
                 {
                   recipe.description
@@ -99,7 +109,8 @@ RecipeDetail.defaultProps = {
   recipes: []
 }
 RecipeDetail.propTypes = {
-  recipes: PropTypes.array
+  recipes: PropTypes.array,
+  match: PropTypes.object
 }
 
 export default RecipeDetail

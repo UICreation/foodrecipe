@@ -8,7 +8,7 @@ npm i
 npm start
 ```
 
-> then open a seperate terminal and run below command
+then open a separate terminal and run the given command below
 
 ```
 node server.js

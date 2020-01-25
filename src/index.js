@@ -19,15 +19,16 @@ class App extends React.Component {
     this.getRecipes()
   }
   getRecipes = () => {
-    fetch('http://localhost:8002/recipes', {
+    // fetch('http://localhost:8002/recipes', {
+      fetch('http://localhost:3000/api/recipes', {
       method: "GET",
       "Content-Type": 'application/json'
     })
       .then(recipes => recipes.json())
       .then(recipes => this.setState({
-        recipes,
-        isLoaded: true
-      }))
+          recipes,
+          isLoaded: true
+        }))
   }
   getRecipe = id => {
     fetch(`http://localhost:8002/recipe/${id}`, {

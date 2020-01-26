@@ -721,6 +721,10 @@ function (_React$Component) {
     };
 
     _this.getRecipe = function (id) {
+      _this.setState({
+        isLoaded: false
+      });
+
       fetch("http://localhost:3000/api/recipe?id=".concat(id), {
         method: "GET",
         "Content-Type": 'application/json'
@@ -36966,7 +36970,9 @@ function (_Component) {
         })));
       }
 
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Loading...");
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "px2"
+      }, "Loading...");
     }
   }]);
 

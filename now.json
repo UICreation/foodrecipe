@@ -3,6 +3,12 @@
     "version": 2,
     "env": {
       "MONGODB_URI": "@food-recipe-uri"
-    }
+    },
+    "routes": [
+      {
+        "src": "/recipe/.*",
+        "dest": "/index.html"
+      }
+    ]
   }
   

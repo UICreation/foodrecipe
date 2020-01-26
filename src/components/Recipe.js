@@ -35,7 +35,7 @@ class RecipeInfo extends Component {
             );
         }
         return (
-            <div>
+            <div className="px2">
                 Loading...
         </div>
         )

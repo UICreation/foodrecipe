@@ -31,7 +31,7 @@ class App extends React.Component {
         }))
   }
   getRecipe = id => {
-    fetch(`/api/recipe/${id}`, {
+    fetch(`/api/recipe?id=${id}`, {
       method: "GET",
       "Content-Type": 'application/json'
     })

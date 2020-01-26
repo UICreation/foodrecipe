@@ -707,7 +707,7 @@ function (_React$Component) {
 
     _this.getRecipes = function () {
       // fetch('http://localhost:8002/recipes', {
-      fetch('/api/recipes', {
+      fetch('http://localhost:3000/api/recipes', {
         method: "GET",
         "Content-Type": 'application/json'
       }).then(function (recipes) {
@@ -721,7 +721,7 @@ function (_React$Component) {
     };
 
     _this.getRecipe = function (id) {
-      fetch("/api/recipe/".concat(id), {
+      fetch("http://localhost:3000/api/recipe?id=".concat(id), {
         method: "GET",
         "Content-Type": 'application/json'
       }).then(function (recipes) {
@@ -36926,7 +36926,7 @@ function (_Component) {
 
     _this.getRecipe = function () {
       var id = _this.props.match.params.id;
-      fetch("/api/recipe/".concat(id), {
+      fetch("http://localhost:3000/api/recipe/?id=".concat(id), {
         method: "GET",
         "Content-Type": 'application/json'
       }).then(function (recipes) {

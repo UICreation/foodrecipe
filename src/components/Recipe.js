@@ -12,7 +12,7 @@ class RecipeInfo extends Component {
     }
     getRecipe = () => {
         let id = this.props.match.params.id;
-        fetch(`/api/recipe/${id}`, {
+        fetch(`/api/recipe/?id=${id}`, {
             method: "GET",
             "Content-Type": 'application/json'
         })

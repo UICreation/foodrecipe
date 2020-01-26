@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import RecipeDetail from './RecipeDetail';
 import PropTypes from 'prop-types';
+const url = process.env.NODE_ENV !== 'production' ? 'http://localhost:8002' : '';
 
 class RecipeInfo extends Component {
     constructor(props) {
@@ -12,7 +13,7 @@ class RecipeInfo extends Component {
     }
     getRecipe = () => {
         let id = this.props.match.params.id;
-        fetch(`/api/recipe/?id=${id}`, {
+        fetch(`${url}/api/recipe?id=${id}`, {
             method: "GET",
             "Content-Type": 'application/json'
         })

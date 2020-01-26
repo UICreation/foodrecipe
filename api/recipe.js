@@ -20,8 +20,8 @@ module.exports = async (req, res) => {
     let id = req.query.id;
     const db = await connectToDatabase(process.env.MONGODB_URI)
     const collection = await db.collection('recipes')
-    const restRecipe = await collection.find({"id": { $ne : id }}).toArray()
-    const recipe = await collection.find({"id": id }).toArray()
+    const restRecipe = await collection.find({ "id": { $ne: id } }).toArray()
+    const recipe = await collection.find({ "id": id }).toArray()
     recipe.push(...restRecipe)
     res.setHeader("Access-Control-Allow-Origin", "*")
     res.status(200).json({ recipe })

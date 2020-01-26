@@ -1,13 +1,13 @@
 import React from 'react'
 import { render } from 'react-dom'
 import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom'
-// import Logo from './static/images/shivam.jpg';
 import Recipe from './components'
 import Favourites from './components/Favourites'
 import RecipeInfo from './components/Recipe'
 import Header from './components/Header'
 import NotFound from './components/NotFound'
 import './static/css/common.css'
+const url = process.env.NODE_ENV !== 'production' ? 'http://localhost:8002' : ''
 
 class App extends React.Component {
   state = {
@@ -20,21 +20,21 @@ class App extends React.Component {
   }
   getRecipes = () => {
     // fetch('http://localhost:8002/recipes', {
-      fetch('/api/recipes', {
+    fetch(`${url}/api/recipes`, {
       method: "GET",
       "Content-Type": 'application/json'
     })
       .then(recipes => recipes.json())
       .then(recipes => this.setState({
-          recipes,
-          isLoaded: true
-        }))
+        recipes,
+        isLoaded: true
+      }))
   }
   getRecipe = id => {
     this.setState({
       isLoaded: false
     })
-    fetch(`/api/recipe/?id=${id}`, {
+    fetch(`${url}/api/recipe?id=${id}`, {
       method: "GET",
       "Content-Type": 'application/json'
     })

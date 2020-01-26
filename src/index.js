@@ -20,7 +20,7 @@ class App extends React.Component {
   }
   getRecipes = () => {
     // fetch('http://localhost:8002/recipes', {
-      fetch('http://localhost:3000/api/recipes', {
+      fetch('/api/recipes', {
       method: "GET",
       "Content-Type": 'application/json'
     })

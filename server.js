@@ -14,7 +14,7 @@ app.listen(port, () => {
 })
 
 app.get('/recipes', (req, res) => {
-  console.log('trigger_______________________________')
+  console.log('trigger__')
   res.setHeader("Access-Control-Allow-Origin","*")
   res.send(json)
   res.end('ok')
